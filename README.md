@@ -25,6 +25,9 @@ U: (x, y, θ)Here-: (x, y, θ) is the robot’s pose expressed in the continuous
 ## Concepts
 ### 1.Occupancy Grid 
 
+![Grid](image/1.PNG)
+
+
 Fig.1: Occupancy Grid mapGrid Localization discretizes the world that’s usually represented in a continuous form. 
 
 Figure 1 isan example of a 2D occupancy grid. For this project we made a grid for 7m × 7m coverage. 
@@ -49,11 +52,17 @@ Tag 5: x=4.25m, y=5.25mThe robot moves in the area within these landmarks, obser
 The observation data consists of range, bearing and tag_num. 
 The robot observes a specific tagidentified by the tag_num (0-5) where range is the distance between the specific landmark and therobot, and bearing is the angle between the landmark and the robot heading direction.
 
+![Sensors](image/2.PNG)
+
+
 Figure 2:- Sensor and Motion pf Robot
 
 You should utilize the odometry motion model for this project as the movement data isgiven by the relative odometry information described by the motion parameters rotation1,translation and rotation2.
 
 ### 4. Noise
+
+![Gauss Distribution](image/3.PNG)
+
 
 
 Figure 3-: Gausian Distribution
@@ -72,5 +81,9 @@ Essentially, every iteration of the bayes filter has two steps:
 a. Prediction Step (Lines 9-11)increases uncertainty in your belief while the update step (Lines 2-8) reduces uncertainty in yourbelief. 
 Ideally, we would want the observation to be the last message at the end of our entire stateestimation process, as it aims to reduce uncertainty in our robot’s belief.
 
-Figure 4-: Algorithm
+![Algorithm](image/4.PNG)
+
+
+
+Figure 4-: Bayes Filter Algorithm
 
