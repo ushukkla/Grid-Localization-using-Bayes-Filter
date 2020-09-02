@@ -1,0 +1,12 @@
+<launch>
+
+ 
+
+  <node type="rviz" name="rviz" pkg="rviz" args="-d $(find ros_pa3)/include/config/config.rviz" />
+
+  <node type="pa3.py" name="pa3.py" pkg="ros_pa3"/>
+
+
+  
+  
+</launch>
